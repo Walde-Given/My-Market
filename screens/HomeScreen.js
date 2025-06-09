@@ -16,7 +16,7 @@ export default function HomeScreen({ navigation }) {
 
   const fetchAllUploads = async () => {
     try {
-      const keys = await AsyncStorage.getAllKeys();
+      const keys = await AsyncStorage.getAlkeys();
       const uploadKeys = keys.filter((key) => key.startsWith('uploads_'));
 
       let allUploads = [];
